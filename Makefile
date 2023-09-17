@@ -6,7 +6,7 @@ INCLUDE = push_swap.h
 OBJECTS = $(SRCS:.c=.o)
 
 all:
-	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+	$(CC) $(CFLAGS) $(SRCS) libft.a -o $(NAME)
 
 clean:
 	rm $(NAME)
