@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/17 15:25:52 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/04/05 19:27:05 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/05/10 12:53:41 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
+#include "libft.h"
 
-void	parsing(char *string);
+char	*ft_strchr(const char *s, int c)
+{
+	int	x;
 
-#endif
+	x = 0;
+	while (s[x])
+	{
+		if (s[x] == (char)c)
+			return ((char *)(s + x));
+		x++;
+	}
+	if (s[x] == (char)c)
+		return ((char *)(s + x));
+	return (NULL);
+}

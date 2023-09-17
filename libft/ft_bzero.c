@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/17 15:25:52 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/04/05 13:35:22 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/05/10 11:16:42 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
+#include "libft.h"
 
-void	parsing(char *string);
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	x;
 
-#endif
+	x = 0;
+	if (n <= 0)
+		return ;
+	while (x < n)
+	{
+		((unsigned char *) s)[x] = '\0';
+		x++;
+	}
+}

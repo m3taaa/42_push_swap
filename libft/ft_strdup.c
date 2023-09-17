@@ -1,19 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/17 15:25:52 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/04/12 18:38:56 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/05/10 12:54:19 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
+#include "libft.h"
 
-void	parsing(char *string);
+static void	ft_strcpy(char *src, char *dest)
+{
+	int	x;
 
-#endif
+	x = 0;
+	while (src[x] != '\0')
+	{
+		dest[x] = src[x];
+		x++;
+	}
+	dest[x] = '\0';
+}
+
+char	*ft_strdup(char *src)
+{
+	char	*dest;
+
+	dest = malloc(sizeof(char) * ft_strlen(src) + 1);
+	if (dest == NULL)
+		return (NULL);
+	ft_strcpy(src, dest);
+	return (dest);
+}

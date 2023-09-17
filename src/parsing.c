@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/17 15:25:52 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/09/17 15:23:28 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/09/17 15:35:30 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
+#include "push_swap.h"
 
-void	parsing(char *string);
+int verif_number(char c)
+{
+	if ()
+}
 
-#endif
+void	parsing(char *string)
+{
+	int x;
+
+	x = 0;
+	printf("String : \n%s", string);
+	while (string[x])
+	{
+
+		x++;
+	}
+}
