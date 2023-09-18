@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:23:28 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/18 14:26:03 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/19 00:18:47 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ int check_number(char *value)
 	x = 0;
 	while (value[x])
 	{
-		if (value[x] <= 47 && value[x] >= 58)
-			return (0);
 		x++;
 	}
 	return (1);
