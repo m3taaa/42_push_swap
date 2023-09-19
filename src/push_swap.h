@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 13:40:48 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:37:29 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ struct pile
 	int *tab;
 };
 
-char **parsing(char *string);
-void	convert(char **tab);
+char	**parsing(char *string);
+int		*convert(char **tab);
 #endif

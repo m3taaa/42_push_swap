@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:23:28 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 13:36:08 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:49:20 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char	*verif(char **tab)
 		}
 		x++;
 	}
-	return ("finish");
+	return ("parsing end");
 }
 
 char **parsing(char *string)
@@ -64,6 +64,5 @@ char **parsing(char *string)
 	res = verif(tab);
 	if (!res)
 		return (NULL);
-	printf("%s\n", res);
 	return (tab);
 }

@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 10:59:04 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 12:24:46 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:54:14 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,27 @@ int main(int ac, char **av)
 {
 	char **tab;
 	int	size_input;
+	int *pile_a;
 
 	if (ac != 2)
 		return (0);
 	else
 	{
-		ft_printf("Start prog : %s\n", av[0]);
 		size_input = ft_strlen(av[1]);
 		if (size_input == 0 || size_input == 1)
 		{
-			ft_printf("trop court\n");
+			ft_printf("Error\n");
 			return (0);
 		}
 		tab = parsing(av[1]);
 		if (!tab)
 		{
-			ft_printf("Only number !\n");
+			ft_printf("Error\n");
 			return (0);
 		}
-		convert(tab);
+		pile_a = convert(tab);
+		if (!pile_a)
+			return (0);
 	}
 	return (0);
 }
