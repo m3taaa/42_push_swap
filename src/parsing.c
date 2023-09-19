@@ -6,28 +6,33 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:23:28 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 00:18:47 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/19 11:46:27 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int check_number(char *value)
+static int check_number(char *value)
 {
 	int x;
 
 	x = 0;
 	while (value[x])
 	{
+		if (value[x] > 57)
+			return (0);
+		else if (value[x] < 48)
+			return (0);
 		x++;
 	}
 	return (1);
 }
 
-char	*verif(char **tab)
+static char	*verif(char **tab)
 {
 	size_t x;
 	size_t y;
+	int verif;
 	
 	x = 0;
 	while (tab[x])
@@ -35,27 +40,27 @@ char	*verif(char **tab)
 		y = 0;
 		while (y < ft_strlen(tab[x]))
 		{
-			int verif = check_number(tab[x]);
-			printf("verif : %d\n", verif);
+			verif = check_number(tab[x]);
+			if (verif == 0)
+				return (NULL);
 			y++;
 		}
-		printf("\n");
 		x++;
 	}
 	return ("finish");
 }
 
-void	parsing(char *string)
+char **parsing(char *string)
 {
-	//int size_string;
 	char	**tab;
+	char	*res;
 
-	//size_string = ft_strlen(string);
 	tab = ft_split(string, ' ');
 	if (!tab)
-		return ;
-	char *test = verif(tab);
-	printf("parsing %s\n", test);
-	//printf("Len s	tring = %d\n", size_string);
-	
+		return (NULL);
+	res = verif(tab);
+	if (!res)
+		return (NULL);
+	printf("%s\n", res);
+	return (tab);
 }
