@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 18:43:53 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/19 19:27:40 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 # include "../libft/libft.h"
 # include "../ft_printf/ft_printf.h"
 
-struct pile 
+typedef struct Pile 
 {
 	int *tab;
-};
+}Pile;
 
 char	**parsing(char *string);
 int		*convert(char **tab);
-void	algo();
+void	algo(struct Pile p);
 
 #endif
