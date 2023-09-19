@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
+/*   By: mmeerber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 12:02:14 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/07/11 15:46:44 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/07/26 19:24:25 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+#include "ft_printf.h"
 
-char **parsing(char *string);
+int	ft_putstr(char *s)
+{
+	size_t	len;
 
-#endif
+	if (s == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	len = ft_strlen(s);
+	write(1, &s[0], len);
+	return (len);
+}

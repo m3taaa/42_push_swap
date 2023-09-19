@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
+/*   By: mmeerber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 12:02:14 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/07/11 13:07:12 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/07/13 16:20:32 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+#include "ft_printf.h"
 
-char **parsing(char *string);
+int	ft_putchar(char c)
+{
+	int	count;
 
-#endif
+	count = 0;
+	count = write(1, &c, 1);
+	return (count);
+}

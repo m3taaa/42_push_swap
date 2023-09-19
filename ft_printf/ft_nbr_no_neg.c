@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_nbr_no_neg.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
+/*   By: mmeerber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 12:02:14 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/07/13 14:58:01 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/07/15 15:52:51 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+#include "ft_printf.h"
 
-char **parsing(char *string);
+int	ft_nbr_no_neg(long long nb)
+{
+	int				count;
+	unsigned long	x;
 
-#endif
+	x = 4294967295;
+	if (nb < 0)
+	{
+		nb += 1;
+		x = x - (-nb);
+		nb = x;
+	}
+	count = 0;
+	count = ft_putnbr(nb);
+	return (count);
+}

@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_hexa_maj.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
+/*   By: mmeerber <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 12:02:14 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/07/13 15:34:44 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/07/13 15:49:24 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+#include "ft_printf.h"
 
-char **parsing(char *string);
+int	ft_hexa_maj(unsigned int n, char *hex)
+{
+	int	count;
 
-#endif
+	count = 1;
+	if (n >= 16)
+		count += ft_hexa_min(n / 16, hex);
+	write(1, &hex[n % 16], 1);
+	return (count);
+}
