@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 10:59:04 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 12:09:01 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/19 12:24:46 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int main(int ac, char **av)
 			ft_printf("Only number !\n");
 			return (0);
 		}
+		convert(tab);
 	}
 	return (0);
 }

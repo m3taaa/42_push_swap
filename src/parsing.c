@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:23:28 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 11:46:27 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/19 13:36:08 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ static int check_number(char *value)
 {
 	int x;
 
-	x = 0;
+	if (value[0] == '-' || value[0] == '+')
+		x = 1;
+	else
+		x = 0;
 	while (value[x])
 	{
 		if (value[x] > 57)

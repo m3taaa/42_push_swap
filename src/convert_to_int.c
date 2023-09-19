@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   convert_to_int.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 13:40:48 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/09/19 12:20:20 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/09/19 15:04:06 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+#include "push_swap.h"
 
-struct pile 
+void convert(char **tab)
 {
-	int *tab;
-};
+	int x;
+	int nb;
+	//int y;
 
-char **parsing(char *string);
-void	convert(char **tab);
-#endif
+	x = 0;
+	while(tab[x])
+	{
+		nb = ft_atoi(tab[x]);
+		x++;
+	}
+}
