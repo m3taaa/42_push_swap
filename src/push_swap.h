@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 19:27:40 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/20 11:59:33 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct Pile
 
 char	**parsing(char *string);
 int		*convert(char **tab);
-void	algo(struct Pile p);
+void	algo(struct Pile a);
+void	sa(struct Pile a);
 
 #endif
