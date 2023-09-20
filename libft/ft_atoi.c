@@ -6,11 +6,12 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:51:06 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/18 10:00:16 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/20 21:05:07 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "../src/push_swap.h"
 
 static	int	char_start_string(const char *str)
 {
@@ -43,9 +44,9 @@ int	ft_atoi(const char *str)
 		temp = nb;
 		nb = (nb * 10) + (str[x++] - '0');
 		if (temp > nb && nega == 1)
-			return (-1);
+			ft_error();
 		if (temp > nb && nega == -1)
-			return (0);
+			ft_error();
 	}
 	return ((int)nb * nega);
 }
