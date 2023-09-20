@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 10:59:04 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/19 19:23:23 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/20 10:08:50 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,18 @@ int main(int ac, char **av)
 		size_input = ft_strlen(av[1]);
 		if (size_input == 0 || size_input == 1)
 		{
-			ft_printf("Error\n");
-			return (0);
+			write(STDERR_FILENO, "Error\n", 6);
+			exit(1);
 		}
 		tab = parsing(av[1]);
 		if (!tab)
 		{
-			ft_printf("Error\n");
-			return (0);
+			write(STDERR_FILENO, "Error\n", 6);
+			exit(1);
 		}
 		pile_a.tab = convert(tab);
 		if (!pile_a.tab)
-			return (0);
+			exit(1);
 		algo(pile_a);
 	}
 	return (0);
