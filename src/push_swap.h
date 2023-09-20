@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/20 15:34:00 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/21 00:53:56 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,16 @@ char	**parsing(char *string);
 int		*convert(char **tab);
 void	algo(struct Pile a);
 void	sa(struct Pile a);
+void	sb(struct Pile b);
+void	ss(struct Pile a, struct Pile b);
+void	pa(struct Pile a, struct Pile b);
+void	pb(struct Pile a, struct Pile b);
+void	ra(struct Pile a);
+void	rb(struct Pile b);
+void	rr(struct Pile a, struct Pile b);
+void 	rra(struct Pile a);
+void	rrb(struct Pile b);
+void 	rrr(struct Pile a, struct Pile b);
 void	ft_error();
 void	free_tab(char **tab);
 

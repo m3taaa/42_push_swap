@@ -1,7 +1,8 @@
 CC = gcc
 CFLAGS = -Werror -Wextra -Wall -Iincludes
 NAME = push_swap
-SRCS = src/*.c
+SRCS = src/*.c\
+	   src/op/*.c
 INCLUDE = push_swap.h
 OBJECTS = $(SRCS:.c=.o)
 
