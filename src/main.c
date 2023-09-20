@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 10:59:04 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/20 10:08:50 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/20 11:27:37 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int main(int ac, char **av)
 		if (!tab)
 		{
 			write(STDERR_FILENO, "Error\n", 6);
-			exit(1);
 		}
 		pile_a.tab = convert(tab);
 		if (!pile_a.tab)
