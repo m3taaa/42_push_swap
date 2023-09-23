@@ -14,20 +14,6 @@
 
 void algo(Pile a)
 {
-	int x;
-	Pile b;
-
-	x = 0;
-	while (a.tab[x])
-	{
-		x++;
-	}
-	b.tab = malloc(sizeof(int) * x);
-	b.tab = a.tab;
-	x = 0;
-	while (b.tab[x])
-	{
-		x++;
-	}
+	sa(a);
 	return ;
 }

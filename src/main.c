@@ -26,7 +26,7 @@ int main(int ac, char **av)
 	tab = parsing(av[1]);
 	if (!tab)
 	{
-		fre_tab(tab);
+		free_tab(tab);
 		ft_error();
 	}
 	pile_a.tab = convert(tab);
