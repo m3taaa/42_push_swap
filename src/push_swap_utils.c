@@ -30,3 +30,27 @@ void	free_tab(char **tab)
 	}
 	free(tab);
 }
+
+void	ft_print_pile(Pile pile)
+{
+	int x;
+
+	x = 0;
+	while (pile.tab[x])
+	{
+		ft_printf("%d\n", pile.tab[x]);
+		x++;
+	}
+	return ;
+}
+
+void	set_size_pile(Pile a)
+{
+	int x;
+
+	x = 0;
+	while (a.tab[x])
+		x++;
+	a.size = x;
+	return ;
+}

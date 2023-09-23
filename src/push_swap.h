@@ -19,6 +19,7 @@
 typedef struct Pile 
 {
 	int *tab;
+	int size;
 }Pile;
 
 char	**parsing(char *string);
@@ -37,5 +38,7 @@ void	rrb(struct Pile b);
 void 	rrr(struct Pile a, struct Pile b);
 void	ft_error();
 void	free_tab(char **tab);
+void    ft_print_pile(Pile pile);
+void    set_size_pile(Pile a);
 
 #endif

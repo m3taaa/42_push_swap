@@ -14,6 +14,11 @@
 
 void	sa(Pile a)
 {
-	ft_printf("%d\n", a.tab[0]);
+	int temp;
+
+	temp = a.tab[0];
+	a.tab[0] = a.tab[1];
+	a.tab[1] = temp;
+	//ft_printf("%d\n", a.tab[0]);
 	return ;
 }
