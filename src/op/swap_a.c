@@ -16,6 +16,8 @@ void	sa(Pile a)
 {
 	int temp;
 
+	if (!a.tab[0] || !a.tab[1])
+		return ;
 	temp = a.tab[0];
 	a.tab[0] = a.tab[1];
 	a.tab[1] = temp;

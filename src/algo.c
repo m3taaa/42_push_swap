@@ -14,10 +14,8 @@
 
 void algo(Pile a)
 {
-	set_size_pile(a);
-	ft_print_pile(a);
-	sa(a);
-	ft_printf("---");
-	ft_print_pile(a);
+	Pile b;
+
+	b.tab = malloc(sizeof(int) * a.size);
 	return ;
 }

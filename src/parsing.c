@@ -68,7 +68,6 @@ static void	verif_double(char **tab)
 	y = temp;
 	while (tab[size_tab])
 		size_tab++;
-	ft_printf("size tab %d\n", size_tab);
 	while (tab[x])
 	{
 		
