@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algo.c                                             :+:      :+:    :+:   */
+/*   swap_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 18:46:44 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/25 15:19:21 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/09/20 11:43:23 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/09/25 14:18:14 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	init_b(Pile b, int size)
+void	sb(Pile b)
 {
-	b.tab = malloc(sizeof(int) * size);
-	if (!b.tab)
-		ft_error();
-	set_size_pile(b);
-}
+	int temp;
 
-void algo(Pile a)
-{
-	Pile b;
-
-	init_b(b, a.size);
-	pa(a, b);
+	if (!a.tab[0] || !a.tab[1])
+		return ;
+	temp = a.tab[0];
+	a.tab[0] = a.tab[1];
+	a.tab[1] = temp;
 	return ;
+}
 }

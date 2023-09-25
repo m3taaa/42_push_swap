@@ -6,8 +6,15 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:39:55 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/20 23:06:30 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/25 14:23:14 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	ss(Pile a, Pile b)
+{
+	sa(a);
+	sb(b);
+	return ;
+}

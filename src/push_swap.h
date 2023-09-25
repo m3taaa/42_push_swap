@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/21 00:53:56 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/25 15:13:41 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ void	ft_error();
 void	free_tab(char **tab);
 void    ft_print_pile(Pile pile);
 void    set_size_pile(Pile a);
+void    copy_pile(Pile a, Pile b);
 
 #endif
