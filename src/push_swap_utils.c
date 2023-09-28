@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:19:44 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/20 15:33:37 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/26 13:46:09 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,4 @@ void	free_tab(char **tab)
 		x++;
 	}
 	free(tab);
-}
-
-void	ft_print_pile(Pile pile)
-{
-	int x;
-
-	x = 0;
-	while (pile.tab[x])
-	{
-		ft_printf("%d\n", pile.tab[x]);
-		x++;
-	}
-	return ;
-}
-
-void	set_size_pile(Pile a)
-{
-	int x;
-
-	x = 0;
-	while (a.tab[x])
-		x++;
-	a.size = x;
-	return ;
 }

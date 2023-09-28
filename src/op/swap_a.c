@@ -6,20 +6,20 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:43:14 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/25 21:34:36 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:04:35 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	sa(Pile a)
+void	sa(Pile *a)
 {
 	int temp;
 
-	if (!a.tab[0] || !a.tab[1])
+	if (!a->tab[0] || !a->tab[1])
 		return ;
-	temp = a.tab[0];
-	a.tab[0] = a.tab[1];
-	a.tab[1] = temp;
+	temp = a->tab[0];
+	a->tab[0] = a->tab[1];
+	a->tab[1] = temp;
 	return ;
 }

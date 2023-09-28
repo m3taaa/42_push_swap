@@ -6,18 +6,17 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:41:36 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/25 23:50:47 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/26 16:48:23 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	pa(Pile a, Pile b)
+void	pa(Pile *a, Pile *b)
 {
-	int temp;
 
-	if (!b.tab[0])
+	if (!b->tab[0])
 		return ;
-	temp = b.tab[0];
+	ft_printf("a in push a (size) : %d\n",a->size);
 	return ;
 }
