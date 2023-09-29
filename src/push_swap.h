@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/28 14:30:08 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:40:35 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ char	**parsing(char *string);
 int		*convert(char **tab);
 void	ft_error();
 void	free_tab(char **tab);
+void	print_tab(char **tab);
 
 #endif

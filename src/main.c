@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 10:59:04 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/26 19:39:11 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:47:40 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ int main(int ac, char **av)
 		free_tab(tab);
 		ft_error();
 	}
-	convert(tab);
 	return (0);
 }

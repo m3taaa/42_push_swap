@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:23:28 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/21 14:58:50 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/28 18:30:44 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,26 +55,17 @@ static char	*verif_number(char **tab)
 
 static void	verif_double(char **tab)
 {
-	int size_tab;
-	int	x;
-	int y;
-	int res;
+	//char *temp;
+	int x;
 
-	size_tab = 0;
 	x = 0;
-	res = 0;
-	y = 0;
-	int temp = res + y;
-	y = temp;
-	while (tab[size_tab])
-		size_tab++;
-	while (tab[x])
+	while(tab[x])
 	{
-		
+		ft_printf("tab[%d] = %s\n", x, tab[x]);
 		x++;
 	}
-	return ;
 }
+
 char **parsing(char *string)
 {
 	char	**tab;
@@ -87,5 +78,6 @@ char **parsing(char *string)
 	if (!res)
 		return (NULL);
 	verif_double(tab);
+	//print_tab(tab);
 	return (tab);
 }

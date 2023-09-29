@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:19:44 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/26 13:46:09 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/09/28 14:40:09 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,16 @@ void	free_tab(char **tab)
 		x++;
 	}
 	free(tab);
+}
+
+void	print_tab(char **tab)
+{
+	int x;
+
+	x = 0;
+	while(tab[x])
+	{
+		ft_printf("tab-> %s\n", tab[x]);
+		x++;
+	}
 }
