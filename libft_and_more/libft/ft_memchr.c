@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:20:15 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/09/28 14:40:35 by mmeerber         ###   ########.fr       */
+/*   Created: 2023/04/06 20:24:19 by mmeerber          #+#    #+#             */
+/*   Updated: 2023/05/10 12:03:04 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include <stdio.h>
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+#include "libft.h"
 
-typedef struct s_pile 
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int content;
-	struct s_pile *next;
-}	t_pile;
+	unsigned	char	*ss;
 
-char	**parsing(char *string);
-int		*convert(char **tab);
-void	ft_error();
-void	free_tab(char **tab);
-void	print_tab(char **tab);
-
-#endif
+	ss = (unsigned char*)s;
+	if (n)
+	{
+		while (n--)
+			if (*ss++ == (unsigned char)c)
+				return (ss - 1);
+	}
+	return (0);
+}
