@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 08:01:31 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/11/30 13:39:50 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/11/30 17:43:33 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,17 @@ static int	check_double(char **tab)
 static int	check_size_number(char **argument, int ac)
 {
 	int		x;
+	int		verif_number;
 
 	x = 0;
+	verif_number = check_number(argument);
+	if (verif_number == 1)
+	{
+		if (ac == 2)
+			double_free(argument);
+		write(STDERR_FILENO, "Error\n", 6);
+		exit (1);
+	}
 	check_atoi(argument, ac);
 	while (argument[x])
 		x++;
@@ -105,7 +114,6 @@ static int	check_size_number(char **argument, int ac)
 int	parsing(char **av, int ac)
 {
 	char	**tab;
-	int		verification_number;
 	int		verification_double;
 
 	if (ac == 2)
@@ -115,9 +123,8 @@ int	parsing(char **av, int ac)
 	if (!tab || tab == NULL)
 		return (1);
 	check_size_number(tab, ac);
-	verification_number = check_number(tab);
 	verification_double = check_double(tab);
-	if (verification_number == 1 | verification_double == 1)
+	if (verification_double == 1)
 	{
 		if (ac == 2)
 			double_free(tab);
