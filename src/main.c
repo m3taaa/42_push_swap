@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 08:00:52 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/11/30 13:27:01 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/12/04 10:35:46 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	main(int ac, char **av)
 		if (parsing_value == 1)
 		{
 			write(STDERR_FILENO, "Error\n", 6);
-			return (0);
+			return (1);
 		}
 		pile_b = NULL;
 		pile_a = init_pile(av, ac);
@@ -60,6 +60,6 @@ int	main(int ac, char **av)
 		free_pile(pile_b);
 	}
 	if (ac < 2)
-		return (0);
+		return (1);
 	return (0);
 }

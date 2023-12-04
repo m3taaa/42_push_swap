@@ -6,7 +6,7 @@
 /*   By: mmeerber <mmeerber@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:25:16 by mmeerber          #+#    #+#             */
-/*   Updated: 2023/11/28 18:43:50 by mmeerber         ###   ########.fr       */
+/*   Updated: 2023/12/04 10:36:30 by mmeerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	check_atoi(char **tab, int ac)
 			if (ac == 2)
 				double_free(tab);
 			write(STDERR_FILENO, "Error\n", 6);
-			exit (0);
+			exit (1);
 		}
 		x++;
 	}
